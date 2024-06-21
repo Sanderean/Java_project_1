@@ -123,37 +123,53 @@ public class UploadMoviesPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeleteAllTablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAllTablesActionPerformed
-        try {
-            repository.deleteAllTables();
+        new SwingWorker<Void, Void>() {
 
-            String relativePath = "assets";
+            @Override
+            protected Void doInBackground() throws Exception {
+                try {
+                    repository.deleteAllTables();
 
-            String projectPath = System.getProperty("user.dir");
+                    String relativePath = "assets";
+                    String projectPath = System.getProperty("user.dir");
+                    String directoryPath = projectPath + File.separator + relativePath;
 
-            String directoryPath = projectPath + "\\" + relativePath;
+                    File directory = new File(directoryPath);
 
-            File directory = new File(relativePath);
-
-            if (directory.isDirectory()) {
-                File[] files = directory.listFiles();
-                if (files != null) {
-                    for (File file : files) {
-                        if (file.isFile()) {
-                            if (file.delete()) {
-                                System.out.println("File " + file.getName() + " deleted.");
-                            } else {
-                                System.out.println("Can not delete the file" + file.getName());
+                    if (directory.isDirectory()) {
+                        File[] files = directory.listFiles();
+                        if (files != null) {
+                            for (File file : files) {
+                                if (file.isFile()) {
+                                    if (file.delete()) {
+                                        System.out.println("File " + file.getName() + " deleted.");
+                                    } else {
+                                        System.out.println("Can not delete the file " + file.getName());
+                                    }
+                                }
                             }
                         }
+                    } else {
+                        System.out.println(directoryPath + " is not a directory.");
                     }
+
+                } catch (Exception ex) {
+                    Logger.getLogger(UploadMoviesPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    throw ex;
                 }
-            } else {
-                System.out.println(directoryPath + " is not a directory.");
+                return null;
             }
 
-        } catch (Exception ex) {
-            Logger.getLogger(UploadMoviesPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            @Override
+            protected void done() {
+                try {
+                    get();
+                    MessageUtils.showInformationMessage("Info", "All tables and files deleted successfully.");
+                } catch (InterruptedException | ExecutionException e) {
+                    MessageUtils.showErrorMessage("Error", "Failed to delete tables and files: " + e.getMessage());
+                }
+            }
+        }.execute();
     }//GEN-LAST:event_btnDeleteAllTablesActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
@@ -185,124 +201,149 @@ public class UploadMoviesPanel extends javax.swing.JPanel {
             return;
         }
 
-        List<Movie> selectMovies;
-        try {
-            selectMovies = repository.selectMovies();
+        new SwingWorker<Void, Void>() {
 
-            for (int i = 0; i < tbParsedData.getRowCount(); i++) {
+            @Override
+            protected Void doInBackground() throws Exception {
+                try {
+                    List<Movie> selectMovies = repository.selectMovies();
 
-                String title = tbParsedData.getValueAt(i, 0) != null ? tbParsedData.getValueAt(i, 0).toString().trim() : "";
-                LocalDateTime releaseDate = tbParsedData.getValueAt(i, 1) != null
-                        ? LocalDateTime.parse(tbParsedData.getValueAt(i, 1).toString().trim(), Movie.DATE_FORMATTER)
-                        : LocalDateTime.now(); // пример дефолтного значения (текущее время)
-                String language = tbParsedData.getValueAt(i, 2) != null ? tbParsedData.getValueAt(i, 2).toString().trim() : "";
-                int duration = tbParsedData.getValueAt(i, 3) != null ? Integer.parseInt(tbParsedData.getValueAt(i, 3).toString().trim()) : 0;
-                int score = tbParsedData.getValueAt(i, 4) != null ? Integer.parseInt(tbParsedData.getValueAt(i, 4).toString().trim()) : 0;
-                String posterURL = tbParsedData.getValueAt(i, 5) != null ? tbParsedData.getValueAt(i, 5).toString().trim() : "";
-                String trailerURL = tbParsedData.getValueAt(i, 6) != null ? tbParsedData.getValueAt(i, 6).toString().trim() : "";
+                    for (int i = 0; i < tbParsedData.getRowCount(); i++) {
+                        String title = tbParsedData.getValueAt(i, 0) != null ? tbParsedData.getValueAt(i, 0).toString().trim() : "";
+                        LocalDateTime releaseDate = tbParsedData.getValueAt(i, 1) != null
+                                ? LocalDateTime.parse(tbParsedData.getValueAt(i, 1).toString().trim(), Movie.DATE_FORMATTER)
+                                : LocalDateTime.now(); // Default value (current time)
+                        String language = tbParsedData.getValueAt(i, 2) != null ? tbParsedData.getValueAt(i, 2).toString().trim() : "";
+                        int duration = tbParsedData.getValueAt(i, 3) != null ? Integer.parseInt(tbParsedData.getValueAt(i, 3).toString().trim()) : 0;
+                        int score = tbParsedData.getValueAt(i, 4) != null ? Integer.parseInt(tbParsedData.getValueAt(i, 4).toString().trim()) : 0;
+                        String posterURL = tbParsedData.getValueAt(i, 5) != null ? tbParsedData.getValueAt(i, 5).toString().trim() : "";
+                        String trailerURL = tbParsedData.getValueAt(i, 6) != null ? tbParsedData.getValueAt(i, 6).toString().trim() : "";
 
-// Создание объекта Movie с обработкой возможных null значений
-                Movie movie = new Movie(title, releaseDate, language, duration, score, posterURL, trailerURL);
+                        Movie movie = new Movie(title, releaseDate, language, duration, score, posterURL, trailerURL);
 
-                if (!selectMovies.contains(movie)) {
-                    handlePicture(movie, movie.getPosterURL());
-                    int idMovie = repository.createMovie(movie);
+                        if (!selectMovies.contains(movie)) {
+                            handlePicture(movie, movie.getPosterURL());
+                            int idMovie = repository.createMovie(movie);
 
-                    String actorsCellValue = (String) tbParsedData.getValueAt(i, 8);
-                    String[] actorsArray = splitAndFilter(actorsCellValue);
-                    String directorsCellValue = (String) tbParsedData.getValueAt(i, 7);
-                    String[] directorsArray =splitAndFilter(directorsCellValue);
-                    String genresCellValue = (String) tbParsedData.getValueAt(i, 9);
-                    String[] genresArray = splitAndFilter(genresCellValue);
+                            String actorsCellValue = (String) tbParsedData.getValueAt(i, 8);
+                            String[] actorsArray = splitAndFilter(actorsCellValue);
+                            String directorsCellValue = (String) tbParsedData.getValueAt(i, 7);
+                            String[] directorsArray = splitAndFilter(directorsCellValue);
+                            String genresCellValue = (String) tbParsedData.getValueAt(i, 9);
+                            String[] genresArray = splitAndFilter(genresCellValue);
 
-                    List<MovieActor> movieActors = new ArrayList<>();
-                    List<MovieDirector> movieDirectors = new ArrayList<>();
-                    List<MovieGenre> movieGenres = new ArrayList<>();
+                            List<MovieActor> movieActors = new ArrayList<>();
+                            List<MovieDirector> movieDirectors = new ArrayList<>();
+                            List<MovieGenre> movieGenres = new ArrayList<>();
 
-                    for (String actorName : actorsArray) {
-                        if (actorName != null) {
-                            int idActor = 0;
-                            Actor actor = new Actor(actorName.trim());
-                            List<Actor> actors = repository.selectActors();
-                            if (!actors.contains(actor)) {
-                                idActor = repository.createActor(actor);
-                            } else {
-                                for (Actor item : actors) {
-                                    if (item.getName().equals(actor.getName())) {
-                                        idActor = item.getId();
-                                        break;
-                                    }
+                            for (String actorName : actorsArray) {
+                                if (actorName != null) {
+                                    int idActor = getOrCreateActorId(actorName.trim());
+                                    MovieActor movieActor = new MovieActor(idMovie, idActor);
+                                    movieActors.add(movieActor);
                                 }
                             }
 
-                            MovieActor movieActor = new MovieActor(idMovie, idActor);
-                            movieActors.add(movieActor);
-                        }
-                    }
+                            if (!movieActors.isEmpty()) {
+                                repository.createMovieActors(movieActors);
+                            }
 
-                    if (!movieActors.isEmpty()) {
-                        repository.createMovieActors(movieActors);
-                    }
-
-                    for (String directorName : directorsArray) {
-                        if (directorName != null) {
-                            int idDirector = 0;
-                            Director director = new Director(directorName.trim());
-                            List<Director> directors = repository.selectDirectors();
-                            if (!directors.contains(director)) {
-                                idDirector = repository.createDirector(director);
-                            } else {
-                                for (Director item : directors) {
-                                    if (item.getName().equals(director.getName())) {
-                                        idDirector = item.getId();
-                                        break;
-                                    }
+                            for (String directorName : directorsArray) {
+                                if (directorName != null) {
+                                    int idDirector = getOrCreateDirectorId(directorName.trim());
+                                    MovieDirector movieDirector = new MovieDirector(idMovie, idDirector);
+                                    movieDirectors.add(movieDirector);
                                 }
                             }
 
-                            MovieDirector movieDirector = new MovieDirector(idMovie, idDirector);
-                            movieDirectors.add(movieDirector);
-                        }
-                    }
+                            if (!movieDirectors.isEmpty()) {
+                                repository.createMovieDirectors(movieDirectors);
+                            }
 
-                    if (!movieDirectors.isEmpty()) {
-                        repository.createMovieDirectors(movieDirectors);
-                    }
-
-                    for (String genreName : genresArray) {
-                        if (genreName != null) {
-                            int idGenre = 0;
-                            Genre genre = new Genre(genreName.trim());
-                            List<Genre> genres = repository.selectGenres();
-                            if (!genres.contains(genre)) {
-                                idGenre = repository.createGenre(genre);
-                            } else {
-                                for (Genre item : genres) {
-                                    if (item.getName().equals(genre.getName())) {
-                                        idGenre = item.getId();
-                                        break;
-                                    }
+                            for (String genreName : genresArray) {
+                                if (genreName != null) {
+                                    int idGenre = getOrCreateGenreId(genreName.trim());
+                                    MovieGenre movieGenre = new MovieGenre(idMovie, idGenre);
+                                    movieGenres.add(movieGenre);
                                 }
                             }
-                            MovieGenre movieGenre = new MovieGenre(idMovie, idGenre);
-                            movieGenres.add(movieGenre);
+
+                            if (!movieGenres.isEmpty()) {
+                                repository.createMovieGenres(movieGenres);
+                            }
+
+                        } else {
+                            MessageUtils.showErrorMessage("Error", movie.getTitle() + " already exists");
                         }
                     }
-
-                    if (!movieGenres.isEmpty()) {
-                        repository.createMovieGenres(movieGenres);
-                    }
-
-                } else {
-                    MessageUtils.showErrorMessage("Error", movie.getTitle() + " already exists");
+                } catch (Exception ex) {
+                    Logger.getLogger(UploadMoviesPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    throw ex;
                 }
-
+                return null;
             }
-        } catch (Exception ex) {
-            Logger.getLogger(UploadMoviesPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
 
+            @Override
+            protected void done() {
+                try {
+                    get();
+                    MessageUtils.showInformationMessage("Info", "Movies uploaded successfully.");
+                } catch (InterruptedException | ExecutionException e) {
+                    MessageUtils.showErrorMessage("Error", "Failed to upload movies: " + e.getMessage());
+                }
+            }
 
+            private int getOrCreateActorId(String actorName) throws Exception {
+                int idActor = 0;
+                Actor actor = new Actor(actorName);
+                List<Actor> actors = repository.selectActors();
+                if (!actors.contains(actor)) {
+                    idActor = repository.createActor(actor);
+                } else {
+                    for (Actor item : actors) {
+                        if (item.getName().equals(actor.getName())) {
+                            idActor = item.getId();
+                            break;
+                        }
+                    }
+                }
+                return idActor;
+            }
+
+            private int getOrCreateDirectorId(String directorName) throws Exception {
+                int idDirector = 0;
+                Director director = new Director(directorName);
+                List<Director> directors = repository.selectDirectors();
+                if (!directors.contains(director)) {
+                    idDirector = repository.createDirector(director);
+                } else {
+                    for (Director item : directors) {
+                        if (item.getName().equals(director.getName())) {
+                            idDirector = item.getId();
+                            break;
+                        }
+                    }
+                }
+                return idDirector;
+            }
+
+            private int getOrCreateGenreId(String genreName) throws Exception {
+                int idGenre = 0;
+                Genre genre = new Genre(genreName);
+                List<Genre> genres = repository.selectGenres();
+                if (!genres.contains(genre)) {
+                    idGenre = repository.createGenre(genre);
+                } else {
+                    for (Genre item : genres) {
+                        if (item.getName().equals(genre.getName())) {
+                            idGenre = item.getId();
+                            break;
+                        }
+                    }
+                }
+                return idGenre;
+            }
+        }.execute();
     }//GEN-LAST:event_btnUploadActionPerformed
 
     private String[] splitAndFilter(String cellValue) {
@@ -310,11 +351,9 @@ public class UploadMoviesPanel extends javax.swing.JPanel {
         return new String[0];
     }
     
-    // Первоначально разделяем строку по запятым
     String[] parts = cellValue.split(",");
     List<String> resultList = new ArrayList<>();
     
-    // Дополнительно разделяем каждую часть по словам "and" и "i"
     for (String part : parts) {
         String[] subParts = part.trim().split("\\b(?:and|i)\\b");
         for (String subPart : subParts) {
@@ -328,19 +367,18 @@ public class UploadMoviesPanel extends javax.swing.JPanel {
 }
     
     private static void handlePicture(Movie movie, String pictureUrl) {
-        // if picture is not ok, we must continue!!!
         try {
             if (pictureUrl == null || pictureUrl.isEmpty()) {
-                return; // Обработка случая, когда pictureUrl не задан
+                return;
             }
 
             int lastIndex = pictureUrl.lastIndexOf(".");
-            String ext = EXT; // По умолчанию расширение jpg
+            String ext = EXT;
 
             if (lastIndex != -1) {
-                ext = pictureUrl.substring(lastIndex); // Получаем расширение из pictureUrl
+                ext = pictureUrl.substring(lastIndex);
                 if (ext.length() > 4) {
-                    ext = ".jpg"; // Если расширение слишком длинное, используем расширение jpg по умолчанию
+                    ext = ".jpg";
                 }
             }
 

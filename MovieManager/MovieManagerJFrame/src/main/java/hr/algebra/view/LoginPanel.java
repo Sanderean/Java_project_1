@@ -17,6 +17,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import hr.algebra.utilities.MessageUtils;
+import java.util.concurrent.ExecutionException;
+import javax.swing.SwingWorker;
 
 /**
  *
@@ -130,29 +132,38 @@ public class LoginPanel extends javax.swing.JPanel {
         if (!formValid()) {
             return;
         }
-        
+
         User user = new User(
                 tfUsername.getText().trim(),
                 tfPassword.getText().trim()
         );
-        try {
-            Optional<User> selectedUser = repository.selectUser(user.getUsername(), user.getPassword());
-            if (!selectedUser.equals(Optional.empty())) {
-                int roleID = selectedUser.get().getRoleID();
-                if (roleID == 2) {
-                    new MovieManagerJFrame(roleID).setVisible(true);
-                    parentFrame.dispose();
-                } else {
-                    new MovieManagerJFrame().setVisible(true);
-                    parentFrame.dispose();
+        new SwingWorker<Optional<User>, Void>() {
+
+            @Override
+            protected Optional<User> doInBackground() throws Exception {
+                return repository.selectUser(user.getUsername(), user.getPassword());
+            }
+
+            @Override
+            protected void done() {
+                try {
+                    Optional<User> selectedUser = get();
+                    if (selectedUser.isPresent()) {
+                        int roleID = selectedUser.get().getRoleID();
+                        if (roleID == 2) {
+                            new MovieManagerJFrame(roleID).setVisible(true);
+                        } else {
+                            new MovieManagerJFrame().setVisible(true);
+                        }
+                        parentFrame.dispose();
+                    } else {
+                        MessageUtils.showErrorMessage("Error", "Wrong Username or Password");
+                    }
+                } catch (InterruptedException | ExecutionException ex) {
+                    Logger.getLogger(LoginPanel.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            else{
-                MessageUtils.showErrorMessage("Error", "Wrong Username or Password");
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(LoginPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }.execute();
     }//GEN-LAST:event_btnSubmitActionPerformed
 
 

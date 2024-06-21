@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Optional;
 import javax.sql.DataSource;
 
-public class SqlRepository implements Repository {
+public class SqlRepository <T> implements Repository <T> {
 
     private static final String DELETE_ALL_TABLES = "{ CALL DeleteAllTables () }";
     
@@ -1035,6 +1035,8 @@ public class SqlRepository implements Repository {
         }
         return Optional.empty();
     }
+
+    
 
 
 }

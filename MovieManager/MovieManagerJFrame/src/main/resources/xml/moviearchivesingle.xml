@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movieArchive>
+    <movieXMLs>
+        <movieXML>
+            <movie id="227">
+                <title>Bajkeri</title>
+                <pubDate/>
+                <description>Kathy (Jodie Comer), odlučna članica Vandala koja je udana za divljeg, bezobzirnog vozača bicikla po imenu Benny (Austin Butler), prisjeća se evolucije Vandala tijekom desetljeća, počevši od lokalnog kluba autsajdera ujedinjenih dobrim vremenima, tutnjavom motora i poštovanjem prema njihovom snažnom, postojanom vođi Johnnyju (Tom Hardy). Tijekom godina Kathy daje sve od sebe kako bi se snašla u neukroćenoj prirodi svog supruga i njegovoj odanosti Johnnyju s kojim osjeća da se mora natjecati za Bennyjevu pažnju. Kako život u Vandalima postaje sve opasniji, a klub prijeti da postane još zlokobnija banda, Kathy, Benny i Johnny prisiljeni su donositi odluke o svojoj odanosti klubu i jedni drugima. 20.15, 22.30</description>
+                <duration>121</duration>
+                <year>2024</year>
+                <posterURL>assets\4ffc5ff3-7530-4591-b62f-9f656ea42d36.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/bajkeri/9242/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>585</id>
+                    <name>Austin B</name>
+                </actor>
+                <actor>
+                    <id>586</id>
+                    <name>Jodie Comer</name>
+                </actor>
+                <actor>
+                    <id>587</id>
+                    <name>Tom Hardy</name>
+                </actor>
+                <actor>
+                    <id>588</id>
+                    <name>Michael Shannon</name>
+                </actor>
+                <actor>
+                    <id>589</id>
+                    <name>Mike Faist</name>
+                </actor>
+                <actor>
+                    <id>590</id>
+                    <name>Norman Reedus</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>183</id>
+                    <name>Jeff Ni</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>200</id>
+                    <name>Krimi drama</name>
+                </genre>
+            </genres>
+        </movieXML>
+    </movieXMLs>
+</movieArchive>

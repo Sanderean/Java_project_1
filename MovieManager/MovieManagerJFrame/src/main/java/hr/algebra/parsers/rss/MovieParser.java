@@ -36,7 +36,7 @@ import org.jsoup.safety.Safelist;
  */
 public class MovieParser {
 
-    private static final String RSS_URL = "https://www.blitz-cinestar-bh.ba/rss.aspx?id=2682";
+    private static final String RSS_URL = "https://www.blitz-cinestar-bh.ba/rss.aspx?id=7679";
     private static final String ATTRIBUTE_URL = "url";
 
     public static List<ParsedData> parse() throws IOException, XMLStreamException {

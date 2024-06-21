@@ -15,9 +15,11 @@ import javax.swing.JTextField;
 import hr.algebra.utilities.FileUtils;
 import hr.algebra.utilities.MessageUtils;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.SwingWorker;
 
 /**
  *
@@ -127,27 +129,37 @@ public class RegisterPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-         if (!formValid()) {
+        if (!formValid()) {
             return;
         }
-        
+
         User user = new User(
                 tfUsername.getText().trim(),
                 tfPassword.getText().trim()
         );
-        try {
-            int userID;
-            if(repository.selectUserByUserName(user.getUsername()).equals(Optional.empty())){
-                repository.createUser(user);
-                new MovieManagerJFrame().setVisible(true);
-                parentFrame.dispose();
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {
+                Optional<User> existingUser = repository.selectUserByUserName(user.getUsername());
+                if (existingUser.isEmpty()) {
+                    repository.createUser(user);
+                }
+                return null;
             }
-            else{
-                MessageUtils.showErrorMessage("Error", "This user is already exists");
+
+            @Override
+            protected void done() {
+                try {
+                    get();
+                    new MovieManagerJFrame().setVisible(true);
+                    parentFrame.dispose();
+                } catch (InterruptedException | ExecutionException ex) {
+                    Logger.getLogger(LoginPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    MessageUtils.showErrorMessage("Error", "Failed to create user: " + ex.getMessage());
+                }
             }
-        } catch (Exception ex) {
-            Logger.getLogger(LoginPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }.execute();
     }//GEN-LAST:event_btnSubmitActionPerformed
 
 

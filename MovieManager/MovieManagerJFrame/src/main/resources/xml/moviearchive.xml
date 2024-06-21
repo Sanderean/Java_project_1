@@ -6,7 +6,7 @@
                 <title>Bajkeri</title>
                 <pubDate/>
                 <description>Kathy (Jodie Comer), odlučna članica Vandala koja je udana za divljeg, bezobzirnog vozača bicikla po imenu Benny (Austin Butler), prisjeća se evolucije Vandala tijekom desetljeća, počevši od lokalnog kluba autsajdera ujedinjenih dobrim vremenima, tutnjavom motora i poštovanjem prema njihovom snažnom, postojanom vođi Johnnyju (Tom Hardy). Tijekom godina Kathy daje sve od sebe kako bi se snašla u neukroćenoj prirodi svog supruga i njegovoj odanosti Johnnyju s kojim osjeća da se mora natjecati za Bennyjevu pažnju. Kako život u Vandalima postaje sve opasniji, a klub prijeti da postane još zlokobnija banda, Kathy, Benny i Johnny prisiljeni su donositi odluke o svojoj odanosti klubu i jedni drugima. 20.15, 22.30</description>
-                <duration>116</duration>
+                <duration>121</duration>
                 <year>2024</year>
                 <posterURL>assets\4ffc5ff3-7530-4591-b62f-9f656ea42d36.jpg</posterURL>
                 <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/bajkeri/9242/20240621</trailerURL>
@@ -14,7 +14,7 @@
             <actors>
                 <actor>
                     <id>585</id>
-                    <name>Austin Butler</name>
+                    <name>Austin B</name>
                 </actor>
                 <actor>
                     <id>586</id>
@@ -40,50 +40,13 @@
             <directors>
                 <director>
                     <id>183</id>
-                    <name>Jeff Nichols</name>
+                    <name>Jeff Ni</name>
                 </director>
             </directors>
             <genres>
                 <genre>
                     <id>200</id>
                     <name>Krimi drama</name>
-                </genre>
-            </genres>
-        </movieXML>
-        <movieXML>
-            <movie id="228">
-                <title>Deadpool i Wolverine</title>
-                <pubDate/>
-                <description>Marvel Studios predstavlja svoju najveću pogrešku do sada – "Deadpool i Wolverine". Bezvoljni Wade Wilson muči se u civilnom životu. Dani kada je bio moralno fleksibilan plaćenik, Deadpool, su iza njega. Kada se njegov svijet suoči s egzistencijalnom prijetnjom, Wade se mora nevoljko ponovno obući, uz još nevoljkijeg... nevoljnijeg? Najnevoljnijeg? Mora uvjeriti nevoljkog Wolverinea da... Kvragu. Sinopsisi su tako glupi. 19.00</description>
-                <duration>127</duration>
-                <year>2024</year>
-                <posterURL>assets\2f42d4ec-5808-4373-bb07-d2ff1cdce75a.jpg</posterURL>
-                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/deadpool-i-wolverine/9372/20240724</trailerURL>
-            </movie>
-            <actors>
-                <actor>
-                    <id>591</id>
-                    <name>Ryan Reynolds</name>
-                </actor>
-                <actor>
-                    <id>592</id>
-                    <name>Hugh Jackman</name>
-                </actor>
-                <actor>
-                    <id>593</id>
-                    <name>Emma Corrin</name>
-                </actor>
-            </actors>
-            <directors>
-                <director>
-                    <id>184</id>
-                    <name>Shawn Levy</name>
-                </director>
-            </directors>
-            <genres>
-                <genre>
-                    <id>201</id>
-                    <name>Akcijska komedija</name>
                 </genre>
             </genres>
         </movieXML>
@@ -128,11 +91,11 @@
             <genres>
                 <genre>
                     <id>202</id>
-                    <name>Horor</name>
+                    <name>Strashna</name>
                 </genre>
                 <genre>
                     <id>203</id>
-                    <name>Triler</name>
+                    <name>Triller</name>
                 </genre>
             </genres>
         </movieXML>
@@ -226,7 +189,7 @@
             <genres>
                 <genre>
                     <id>205</id>
-                    <name>SF</name>
+                    <name>SFY</name>
                 </genre>
             </genres>
         </movieXML>
@@ -437,7 +400,7 @@
             <genres>
                 <genre>
                     <id>205</id>
-                    <name>SF</name>
+                    <name>SFY</name>
                 </genre>
             </genres>
         </movieXML>
@@ -472,13 +435,13 @@
             <directors>
                 <director>
                     <id>195</id>
-                    <name>Wes Ball</name>
+                    <name>Weska Ball</name>
                 </director>
             </directors>
             <genres>
                 <genre>
                     <id>205</id>
-                    <name>SF</name>
+                    <name>SFY</name>
                 </genre>
                 <genre>
                     <id>210</id>
@@ -580,7 +543,7 @@
             <genres>
                 <genre>
                     <id>202</id>
-                    <name>Horor</name>
+                    <name>Strashna</name>
                 </genre>
             </genres>
         </movieXML>
@@ -622,6 +585,55 @@
                 <genre>
                     <id>213</id>
                     <name>akcija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="243">
+                <title>Bajker</title>
+                <pubDate/>
+                <description>Kathy (Jodie Comer), odlučna članica Vandala koja je udana za divljeg, bezobzirnog vozača bicikla po imenu Benny (Austin Butler), prisjeća se evolucije Vandala tijekom desetljeća, počevši od lokalnog kluba autsajdera ujedinjenih dobrim vremenima, tutnjavom motora i poštovanjem prema njihovom snažnom, postojanom vođi Johnnyju (Tom Hardy). Tijekom godina Kathy daje sve od sebe kako bi se snašla u neukroćenoj prirodi svog supruga i njegovoj odanosti Johnnyju s kojim osjeća da se mora natjecati za Bennyjevu pažnju. Kako život u Vandalima postaje sve opasniji, a klub prijeti da postane još zlokobnija banda, Kathy, Benny i Jo, 22.30</description>
+                <duration>116</duration>
+                <year>2024</year>
+                <posterURL>assets\acf71530-c7d3-4aab-ae22-d12239aeffa9.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/bajkeri/9242/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>585</id>
+                    <name>Austin B</name>
+                </actor>
+                <actor>
+                    <id>586</id>
+                    <name>Jodie Comer</name>
+                </actor>
+                <actor>
+                    <id>587</id>
+                    <name>Tom Hardy</name>
+                </actor>
+                <actor>
+                    <id>588</id>
+                    <name>Michael Shannon</name>
+                </actor>
+                <actor>
+                    <id>589</id>
+                    <name>Mike Faist</name>
+                </actor>
+                <actor>
+                    <id>590</id>
+                    <name>Norman Reedus</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>183</id>
+                    <name>Jeff Ni</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>200</id>
+                    <name>Krimi drama</name>
                 </genre>
             </genres>
         </movieXML>
