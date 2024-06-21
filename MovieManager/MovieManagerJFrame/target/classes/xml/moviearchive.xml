@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movieArchive>
+    <movieXMLs>
+        <movieXML>
+            <movie id="227">
+                <title>Bajkeri</title>
+                <pubDate/>
+                <description>Kathy (Jodie Comer), odlučna članica Vandala koja je udana za divljeg, bezobzirnog vozača bicikla po imenu Benny (Austin Butler), prisjeća se evolucije Vandala tijekom desetljeća, počevši od lokalnog kluba autsajdera ujedinjenih dobrim vremenima, tutnjavom motora i poštovanjem prema njihovom snažnom, postojanom vođi Johnnyju (Tom Hardy). Tijekom godina Kathy daje sve od sebe kako bi se snašla u neukroćenoj prirodi svog supruga i njegovoj odanosti Johnnyju s kojim osjeća da se mora natjecati za Bennyjevu pažnju. Kako život u Vandalima postaje sve opasniji, a klub prijeti da postane još zlokobnija banda, Kathy, Benny i Johnny prisiljeni su donositi odluke o svojoj odanosti klubu i jedni drugima. 20.15, 22.30</description>
+                <duration>116</duration>
+                <year>2024</year>
+                <posterURL>assets\4ffc5ff3-7530-4591-b62f-9f656ea42d36.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/bajkeri/9242/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>585</id>
+                    <name>Austin Butler</name>
+                </actor>
+                <actor>
+                    <id>586</id>
+                    <name>Jodie Comer</name>
+                </actor>
+                <actor>
+                    <id>587</id>
+                    <name>Tom Hardy</name>
+                </actor>
+                <actor>
+                    <id>588</id>
+                    <name>Michael Shannon</name>
+                </actor>
+                <actor>
+                    <id>589</id>
+                    <name>Mike Faist</name>
+                </actor>
+                <actor>
+                    <id>590</id>
+                    <name>Norman Reedus</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>183</id>
+                    <name>Jeff Nichols</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>200</id>
+                    <name>Krimi drama</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="228">
+                <title>Deadpool i Wolverine</title>
+                <pubDate/>
+                <description>Marvel Studios predstavlja svoju najveću pogrešku do sada – "Deadpool i Wolverine". Bezvoljni Wade Wilson muči se u civilnom životu. Dani kada je bio moralno fleksibilan plaćenik, Deadpool, su iza njega. Kada se njegov svijet suoči s egzistencijalnom prijetnjom, Wade se mora nevoljko ponovno obući, uz još nevoljkijeg... nevoljnijeg? Najnevoljnijeg? Mora uvjeriti nevoljkog Wolverinea da... Kvragu. Sinopsisi su tako glupi. 19.00</description>
+                <duration>127</duration>
+                <year>2024</year>
+                <posterURL>assets\2f42d4ec-5808-4373-bb07-d2ff1cdce75a.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/deadpool-i-wolverine/9372/20240724</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>591</id>
+                    <name>Ryan Reynolds</name>
+                </actor>
+                <actor>
+                    <id>592</id>
+                    <name>Hugh Jackman</name>
+                </actor>
+                <actor>
+                    <id>593</id>
+                    <name>Emma Corrin</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>184</id>
+                    <name>Shawn Levy</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>201</id>
+                    <name>Akcijska komedija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="229">
+                <title>Egzorcizam</title>
+                <pubDate/>
+                <description>Napeti horor triler s oskarovcem Russellom Croweom i Samom Worthingtonom u glavnim ulogama. Problematični glumac Anthony Miller (Crowe) počinje gubiti kontrolu nad svojim životom tijekom snimanja horor filma. Već opterećen vlastitim demonima, suočava se s dodatnim izazovima dok ulazi dublje u ulogu. Njegova emocionalna nestabilnost i unutarnje borbe postaju očite dok se odvija rad na filmu. U isto vrijeme, njegova otuđena kći (Ryan Simpkins), počinje osjećati zabrinutost. Postavlja si pitanje je li njezin otac ponovno pod utjecajem svojih prošlih ovisnosti ili iza njegove nestabilnosti stoji nešto dublje i mračnije. 16.50, 19.00, 21.00</description>
+                <duration>95</duration>
+                <year>2024</year>
+                <posterURL>assets\bfec1a60-e8ad-49de-972b-20c69f5bb8a4.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/egzorcizam/9239/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>594</id>
+                    <name>Russell Crowe</name>
+                </actor>
+                <actor>
+                    <id>595</id>
+                    <name>Sam Worthington</name>
+                </actor>
+                <actor>
+                    <id>596</id>
+                    <name>David Hyde Pierce</name>
+                </actor>
+                <actor>
+                    <id>597</id>
+                    <name>Chloe Bailey</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>185</id>
+                    <name>M.A. Fortin</name>
+                </director>
+                <director>
+                    <id>186</id>
+                    <name>Joshua John Miller</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>202</id>
+                    <name>Horor</name>
+                </genre>
+                <genre>
+                    <id>203</id>
+                    <name>Triler</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="230">
+                <title>Ezra</title>
+                <pubDate/>
+                <description>Stand-up komičar Max Bernal (Bobby Cannavale) i njegov 11-godišnji autistični sin Ezra (William Fitzgerald) kreću na putovanje automobilom u ovom živopisnom portretu obitelji koja pokušava shvatiti kako razumjeti jedno drugo. Nakon što mu se nedavno raspala karijera i brak, Max živi sa svojim ocem Stanom (Robert De Niro) i u dubokom je sukobu sa svojom uskoro bivšom suprugom Jennom (Rose Byrne) oko načina na koji bi trebali pristupiti posebnim potrebama njihovog sina. Kada Ezru izbace iz još jedne škole, Max donosi kontroverznu odluku da uzme Ezru usred noći, započinjući putovanje diljem zemlje. Režiju potpisuje Tony Goldwyn, a u filmu također glume Vera Farmiga, Rainn Wilson i Whoopi Goldberg. 19.45, 21.55</description>
+                <duration>101</duration>
+                <year>2024</year>
+                <posterURL>assets\cdcbdf16-494b-43ae-9501-50555941ba7a.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/ezra/9332/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>598</id>
+                    <name>Byrne</name>
+                </actor>
+                <actor>
+                    <id>599</id>
+                    <name>Robert De Niro</name>
+                </actor>
+                <actor>
+                    <id>600</id>
+                    <name>Bobby Cannavale</name>
+                </actor>
+                <actor>
+                    <id>601</id>
+                    <name>William Fitzgerald</name>
+                </actor>
+                <actor>
+                    <id>602</id>
+                    <name>Vera Farmiga</name>
+                </actor>
+                <actor>
+                    <id>603</id>
+                    <name>Rose Byrne</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>187</id>
+                    <name>Tony Goldwyn</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>204</id>
+                    <name>Drama</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="231">
+                <title>Furiosa: Pobješnjeli Max saga</title>
+                <pubDate/>
+                <description>Anya Taylor-Joy i Chris Hemsworth glavne su zvijezde filma "Furiosa: Pobješnjeli Max Saga", filmskog remek-djela dobitnika Oscara, genijalnog redatelja Georgea Millera. Radi se o dugoočekivanom povratku u ikonični distopijski svijet koji je stvorio prije više od 30 godina s kultnim filmovima "Mad Max". Dok se svijet raspadao, mladu Furiosu otimaju i ona pada u ruke horde predvođene Gospodarom Dementusom. Prolazeći kroz pustoš, nailaze na naselje Citadela kojom vlada Besmrtni Joe. Dok se dva tirana bore za dominaciju, Furiosa mora preživjeti mnoge izazove i sukobe u pustoši i pronaći svoj put kući. 18.50, 21.45</description>
+                <duration>148</duration>
+                <year>2024</year>
+                <posterURL>assets\b75e3b70-2807-4740-9988-21b7f5a3e3f3.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/furiosa-pobjesnjeli-max-saga/9233/20240622</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>604</id>
+                    <name>Anya</name>
+                </actor>
+                <actor>
+                    <id>605</id>
+                    <name>Taylor-Joy</name>
+                </actor>
+                <actor>
+                    <id>606</id>
+                    <name>Chris Hemsworth</name>
+                </actor>
+                <actor>
+                    <id>607</id>
+                    <name>Alyla Browne</name>
+                </actor>
+                <actor>
+                    <id>608</id>
+                    <name>Tom Burke</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>188</id>
+                    <name>George Miller</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>205</id>
+                    <name>SF</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="232">
+                <title>Garfield - sink</title>
+                <pubDate/>
+                <description>Nakon što se njegov divni, lagodni i siti život s Jonom i Odiejem potpuno promijeni dolaskom Garfieldovog oca Vica, Garfield će morati na avanturu koja će ga naučiti nečemu neočekivanom… 11.30, 13.30, 15.30</description>
+                <duration>100</duration>
+                <year>2024</year>
+                <posterURL>assets\3fa81cfe-80cc-42ea-85ba-67b02dccfca0.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/garfield-sink/9354/20240622</trailerURL>
+            </movie>
+            <actors/>
+            <directors>
+                <director>
+                    <id>189</id>
+                    <name>Mark Dindal</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>206</id>
+                    <name>Animacija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="233">
+                <title>Grozan ja 4 - sink</title>
+                <pubDate/>
+                <description>18.00</description>
+                <duration>95</duration>
+                <year>2024</year>
+                <posterURL>assets\6e6bff10-76b6-40ca-97a6-86b067283a3c.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/grozan-ja-4-sink/9246/20240622</trailerURL>
+            </movie>
+            <actors/>
+            <directors>
+                <director>
+                    <id>190</id>
+                    <name>Chris Renaud</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>206</id>
+                    <name>Animacija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="234">
+                <title>Horizont: Američka saga - Prvo poglavlje</title>
+                <pubDate/>
+                <description>Redatelj, scenarist i glumac, oskarovac Kevin Costner donosi epski vestern Horizon: An American Saga koji će Costneru biti četvrti film koji je režirao, uz nezaboravni „Ples s vukovima”, Oscarom nagrađeni vestern iz 1990. godine. Film prati 15-godišnje razdoblje širenja i naseljavanja američkog zapada prije i poslije Građanskog rata. Tijekom ovog razdoblja, Amerika prolazi kroz transformaciju koja oblikuje povijest i sudbinu te regije. 19.30</description>
+                <duration>181</duration>
+                <year>2024</year>
+                <posterURL>assets\311398d9-34df-4acf-af81-1656fcf53186.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/horizont-americka-saga-prvo-poglavlje/9245/20240627</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>609</id>
+                    <name>Kevin Costner</name>
+                </actor>
+                <actor>
+                    <id>610</id>
+                    <name>Sienna Miller</name>
+                </actor>
+                <actor>
+                    <id>611</id>
+                    <name>Sam Worthingon</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>191</id>
+                    <name>Kevin Costner</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>207</id>
+                    <name>Epski vestern</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="235">
+                <title>Imaginarni prijatelji SINK</title>
+                <pubDate/>
+                <description>Iz maštaonice Johna Krasinskog dolazi film za cijelu obitelj u kojem glavne uloge tumače Ryan Reynolds i Steve Carell! Zakoračite u svijet u koji morate vjerovati da biste ga vidjeli. Imaginarni prijatelji je priča o djevojčici koja otkriva da može vidjeti imaginarne prijatelje svih ljudi – i što radi s tom supermoći – upušta se u čarobnu avanturu kako bi ponovno povezala zaboravljene imaginarne prijatelje s njihovom djecom. 13.00</description>
+                <duration>104</duration>
+                <year>2024</year>
+                <posterURL>assets\9e5c097f-a740-4234-9fbb-834db25e1ac7.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/imaginarni-prijatelji-sink/9229/20240622</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>591</id>
+                    <name>Ryan Reynolds</name>
+                </actor>
+                <actor>
+                    <id>612</id>
+                    <name>John Krasinski</name>
+                </actor>
+                <actor>
+                    <id>613</id>
+                    <name>Cailey Fleming</name>
+                </actor>
+                <actor>
+                    <id>614</id>
+                    <name>Fiona Shaw</name>
+                </actor>
+                <actor>
+                    <id>615</id>
+                    <name>Phoebe Waller-Bridge</name>
+                </actor>
+                <actor>
+                    <id>616</id>
+                    <name>Louis Gossett Jr.</name>
+                </actor>
+                <actor>
+                    <id>617</id>
+                    <name>Alan Kim</name>
+                </actor>
+                <actor>
+                    <id>618</id>
+                    <name>Liza Colón-Zayas</name>
+                </actor>
+                <actor>
+                    <id>619</id>
+                    <name>Steve Carell</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>192</id>
+                    <name>John Krasinski</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>208</id>
+                    <name>Obiteljska komedija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="236">
+                <title>Izvrnuto obrnuto 2 - sink</title>
+                <pubDate/>
+                <description>Izvrnuto obrnuto 2 je nastavak velikog hita studija Disney i Pixar iz 2015. godine u kojem smo upoznali djevojčicu Riley i njezinih pet emocija. U nastavku Riley slavi 13. rođendan i stiže jedna sasvim nova emocija koja će unijeti još veći kaos (zapravo stiže ih još nekoliko!)! Emocije Sreća, Strah, Tuga, Ljutnja i Gađenje imaju novog posla u Rileyinom umu. Dok su se u prvom nastavku morale nositi s privikavanjem na novu okolinu zbog selidbe u novi grad, sada dobivaju društvo novih emocija jer Riley ipak odrasta u mladu djevojku. Tinejdžerske godine znaju biti emotivno jako zahtjevne. 16.00, 18.00</description>
+                <duration>97</duration>
+                <year>2024</year>
+                <posterURL>assets\0ce49666-9626-4e09-b2a2-612f266a9ee9.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/izvrnuto-obrnuto-2-sink/9240/20240621</trailerURL>
+            </movie>
+            <actors/>
+            <directors>
+                <director>
+                    <id>193</id>
+                    <name>Kelsey Mann</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>209</id>
+                    <name>animacija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="237">
+                <title>Mjesto tišine: Dan prvi</title>
+                <pubDate/>
+                <description>Pomno slušajte, pažljivo se krećite, nikad ni šuma ne stvorite, ako vas ne mogu čuti, ne mogu vas loviti…Dolazi spinoff franšize Mjesto tišine u kojem gledamo oskarovku Lupitu Nyong’o u glavnoj ulozi. Prati ženu koja se suočava s prvom invazijom bića koja love putem zvuka u New Yorku. Mjesto tišine Johna Krasinskog je 2018. postao instant hit među fanovima post-apokaliptičnih priča i horor filmova. 2021. uslijedio je nastavak koji je pratio obitelj Abbott iz prvog dijela. Drugi film je dao mali uvid u ono što se događalo prije nego su svijetom zavladala bića koja hvataju ljude na svaki pa i najmanji šum, a ove godine izlazi proširena priča o tome kako je sve započelo. Radnja prati ženu koja se suočava s prvom invazijom bića koja svoje žrtve u New Yorku love putem zvuka.19.00</description>
+                <duration>100</duration>
+                <year>2024</year>
+                <posterURL>assets\cedccf63-2f2f-4bd6-8e39-68dd6ef69250.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/mjesto-tisine-dan-prvi/9244/20240627</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>620</id>
+                    <name>Lupita Nyong’o</name>
+                </actor>
+                <actor>
+                    <id>621</id>
+                    <name>Joseph Quinn</name>
+                </actor>
+                <actor>
+                    <id>622</id>
+                    <name>Alex Wolff</name>
+                </actor>
+                <actor>
+                    <id>623</id>
+                    <name>Djimon Hounsou</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>194</id>
+                    <name>Michael Sarnoski</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>205</id>
+                    <name>SF</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="238">
+                <title>Planet majmuna: Novo kraljevstvo</title>
+                <pubDate/>
+                <description>Iznimno uspješna filmska franšiza izvorno je temeljena na romanu Pierrea Boullea, a originalni je film “Planet majmuna” objavljen davne 1968. godine. Novu popularnost je stekla s posljednja tri filma koji su se pokazali kao odlične ratne avanture. Redatelj Wes Ball udahnuo je novi život globalnoj, epskoj franšizi koja se odvija nakon Cezarove vladavine nekoliko generacija u budućnosti, u kojoj su majmuni dominantna vrsta koja živi skladno, dok je ljudska vrsta svedena na život u sjeni. Dok novi tiranski vođa majmuna gradi svoje carstvo, jedan mladi majmun odlučuje se na mučno putovanje koje će ga natjerati da preispita sve što je znao o prošlosti i donese odluke koje će definirati budućnost njegove vrste, i ljudske također. 16.00</description>
+                <duration>138</duration>
+                <year>2024</year>
+                <posterURL>assets\1401fea1-73bd-4cef-aba2-db2ba3feac9f.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/planet-majmuna-novo-kraljevstvo/9226/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>624</id>
+                    <name>Owen Teague</name>
+                </actor>
+                <actor>
+                    <id>625</id>
+                    <name>Freya Allan</name>
+                </actor>
+                <actor>
+                    <id>626</id>
+                    <name>Kevin Durand</name>
+                </actor>
+                <actor>
+                    <id>627</id>
+                    <name>Peter Macon</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>195</id>
+                    <name>Wes Ball</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>205</id>
+                    <name>SF</name>
+                </genre>
+                <genre>
+                    <id>210</id>
+                    <name>Akcijski</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="239">
+                <title>Polarna odiseja</title>
+                <pubDate/>
+                <description>Polarna odiseja je univerzalna priča o ljubavi i prijateljstvu, koja nadilazi geografske granice i ukazuje na strašne posljedice globalnog zatopljenja. Snimano u sjevernoj Kanadi, ova priča donosi nevjerojatne prizore polarne prirode koji će i mlade i velike gledatelje oduševiti. Kina i Yuk je par polarnih lisica koje žive na ledenjaku i žele osnovati obitelj. No sve blaža temperatura i nedostatak hrane prisiljava Yuka u daleke pohode kako bi uzdržavao svoju Kinu i sebe. Veličanstvena priroda je narušena, a kada led pod njima pukne zbog previsoke temperature, lisice se razdvoje, svaka na svom dijelu ledenjaka. Razdvojeni moraju se suočiti s opasnostima i istražiti nova područja u nadi da će se ponovno sresti u vrijeme rođenja njihovih mladunaca. 15.05</description>
+                <duration>81</duration>
+                <year>2024</year>
+                <posterURL>assets\c8abc5ba-7662-4966-80e1-801dff43d99e.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/polarna-odiseja/9234/20240622</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>628</id>
+                    <name>Virginia Efira</name>
+                </actor>
+                <actor>
+                    <id>629</id>
+                    <name>Veronique Boileau</name>
+                </actor>
+                <actor>
+                    <id>630</id>
+                    <name>Joe Bishop</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>196</id>
+                    <name>Guillaume Maidatchevsky</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>211</id>
+                    <name>Avantura</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="240">
+                <title>Priča o leptiru - sink</title>
+                <pubDate/>
+                <description>"Bajka o leptiru" je animirani dugometražni film namijenjen cijeloj obitelji, smješten uz raznoliku, slikovitu i uvijek promjenjivu atmosferu velike migracije monarh leptira. Hrabri i simpatični, ali nespretni leptiri s jednim krilom, po imenu Patrick, krije se u prikolici mliječne trave kako bi krenuo na putovanje života. Zajedno sa svojim najboljim prijateljem, zabavnom gusjenicom Martyjem, i Jennifer, leptiricom koja se boji visina, Patrick će postati nevjerojatan heroj. No prije svega, mora se suočiti sa svojim strahovima, prihvatiti svoju jedinstvenost i pobijediti neprijatelje, boreći se protiv promjenjivih vremenskih prilika, ljudi i tri zle ptice željne osvete. "Bajka o leptiru" je priča o avanturi, samospoznaji i herojstvu ispričana s puno humora čija je poruka da su naše razlike manje važne od emocija koje dijelimo, te da se upravo u nepovoljnim situacijama pokazuje naš pravi karakter. 11.55, 14.00</description>
+                <duration>88</duration>
+                <year>2023</year>
+                <posterURL>assets\460e4bab-f391-4c20-bf28-f83f04c25e90.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/prica-o-leptiru-sink/9317/20240622</trailerURL>
+            </movie>
+            <actors/>
+            <directors>
+                <director>
+                    <id>197</id>
+                    <name>Sophie Roy</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>209</id>
+                    <name>animacija</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="241">
+                <title>Promatrači</title>
+                <pubDate/>
+                <description>Dakota Fanning zvijezda je napetog nadnaravnog trilera u režiji Ishane Night Shyamalan. Radnja filma prati Minu, 28-godišnju umjetnicu koja se izgubi u prostranoj, netaknutoj šumi u zapadnoj Irskoj. Kada Mina nađe sklonište, nesvjesno ostaje zarobljena pored tri stranca koje svake večeri promatraju i uhode tajanstvena stvorenja. 17.30</description>
+                <duration>102</duration>
+                <year>0</year>
+                <posterURL>assets\6ad4619b-9b47-47e6-8a5d-06e4dc1506fb.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/promatraci/9238/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>631</id>
+                    <name>Dakota Fanning</name>
+                </actor>
+                <actor>
+                    <id>632</id>
+                    <name>Olwen Fouere</name>
+                </actor>
+                <actor>
+                    <id>633</id>
+                    <name>Georgina Campbell</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>198</id>
+                    <name>Ishana Shyamalan</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>202</id>
+                    <name>Horor</name>
+                </genre>
+            </genres>
+        </movieXML>
+        <movieXML>
+            <movie id="242">
+                <title>Zločesti dečki: Sve ili ništa</title>
+                <pubDate/>
+                <description>Ovog ljeta, najpoznatiji Zločesti dečki se vraćaju u njihovom kultnom spoju oktanske akcije i urnebesne komedije, ali ovaj put s malim preokretom: sada su oni u bijegu.19.15, 21.40</description>
+                <duration>115</duration>
+                <year>2024</year>
+                <posterURL>assets\1fde87d4-c06a-4005-b06c-9fe2c1cf778e.jpg</posterURL>
+                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/zlocesti-decki-sve-ili-nista/9367/20240621</trailerURL>
+            </movie>
+            <actors>
+                <actor>
+                    <id>634</id>
+                    <name>Will Smith</name>
+                </actor>
+                <actor>
+                    <id>635</id>
+                    <name>Martin Lawrence</name>
+                </actor>
+                <actor>
+                    <id>636</id>
+                    <name>Vanessa Hudgens</name>
+                </actor>
+            </actors>
+            <directors>
+                <director>
+                    <id>199</id>
+                    <name>Adil &amp; Bilall</name>
+                </director>
+            </directors>
+            <genres>
+                <genre>
+                    <id>212</id>
+                    <name>Komedija</name>
+                </genre>
+                <genre>
+                    <id>213</id>
+                    <name>akcija</name>
+                </genre>
+            </genres>
+        </movieXML>
+    </movieXMLs>
+</movieArchive>
