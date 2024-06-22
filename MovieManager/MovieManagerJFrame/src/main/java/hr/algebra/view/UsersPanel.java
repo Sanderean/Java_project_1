@@ -8,20 +8,16 @@ import hr.algebra.dal.Repository;
 import hr.algebra.dal.RepositoryFactory;
 import hr.algebra.model.Role;
 import hr.algebra.model.User;
-import hr.algebra.view.model.UserTableModel;
-import java.awt.Component;
+import hr.algebra.utilities.MessageUtils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingWorker;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableColumn;
 
 
@@ -120,48 +116,54 @@ public class UsersPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-    List<User> updateUsers = new ArrayList<>();
+        if (tbUsers.getRowCount() > 0) {
+            List<User> updateUsers = new ArrayList<>();
 
-    DefaultTableModel tableModelUsers = (DefaultTableModel) tbUsers.getModel();
-    for (int i = 0; i < tableModelUsers.getRowCount(); i++) {
-        int userId = (int) tableModelUsers.getValueAt(i, 0);
-        String selectedRole = (String) tableModelUsers.getValueAt(i, 3);
+            DefaultTableModel tableModelUsers = (DefaultTableModel) tbUsers.getModel();
+            for (int i = 0; i < tableModelUsers.getRowCount(); i++) {
+                int userId = (int) tableModelUsers.getValueAt(i, 0);
+                String selectedRole = (String) tableModelUsers.getValueAt(i, 3);
 
-        if (!selectedRole.equals("User")) {
-            User updateUser = null;
-            for (User user : users) {
-                if (user.getId() == userId) {
-                    updateUser = user;
-                    break;
-                }
-            }
-
-            if (selectedRole.equals("Admin")) {
-                updateUser.setRoleID(2);
-            }
-
-            updateUsers.add(updateUser);
-        }
-    }
-   
-        new SwingWorker<Void, Void>() {
-            @Override
-            protected Void doInBackground() {
-                for (User updateUser : updateUsers) {
-                    try {
-                        repository.updateUser(updateUser.getId(), updateUser);
-                    } catch (Exception ex) {
-                        Logger.getLogger(UsersPanel.class.getName()).log(Level.SEVERE, null, ex);
+                if (!selectedRole.equals("User")) {
+                    User updateUser = null;
+                    for (User user : users) {
+                        if (user.getId() == userId) {
+                            updateUser = user;
+                            break;
+                        }
                     }
+
+                    if (selectedRole.equals("Admin")) {
+                        updateUser.setRoleID(2);
+                    }
+
+                    updateUsers.add(updateUser);
                 }
-                return null;
             }
 
-            @Override
-            protected void done() {
-                initTables();
-            }
-        }.execute();
+            new SwingWorker<Void, Void>() {
+                @Override
+                protected Void doInBackground() {
+                    for (User updateUser : updateUsers) {
+                        try {
+                            repository.updateUser(updateUser.getId(), updateUser);
+                        } catch (Exception ex) {
+                            Logger.getLogger(UsersPanel.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                    return null;
+                }
+
+                @Override
+                protected void done() {
+                    initTables();
+                    MessageUtils.showInformationMessage("Info", "Users are successfully updated");
+                }
+            }.execute();
+        }
+        else{
+            MessageUtils.showErrorMessage("Error", "There is no users in the table");
+        }
 
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -175,66 +177,67 @@ public class UsersPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void initTables() {
-        tbUsers.setRowHeight(25);
-        tbUsers.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        
-        tbAdmins.setRowHeight(25);
-        tbAdmins.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        
-        roles = new ArrayList<>();
-        users = new ArrayList<>();
+    tbUsers.setRowHeight(25);
+    tbUsers.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    
+    tbAdmins.setRowHeight(25);
+    tbAdmins.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    tbAdmins.setDefaultEditor(Object.class, null);
+    
+    roles = new ArrayList<>();
+    users = new ArrayList<>();
 
-        
-        new SwingWorker<Void, Void>() {
-            @Override
-            protected Void doInBackground() {
-                try {
-                    users = repository.selectUsers();
-                    roles = repository.selectRoles();
-                } catch (Exception ex) {
-                    Logger.getLogger(UsersPanel.class.getName()).log(Level.SEVERE, null, ex);
+    new SwingWorker<Void, Void>() {
+        @Override
+        protected Void doInBackground() {
+            try {
+                users = repository.selectUsers();
+                roles = repository.selectRoles();
+            } catch (Exception ex) {
+                Logger.getLogger(UsersPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return null;
+        }
+
+        @Override
+        protected void done() {
+            DefaultTableModel tableModelUsers = new DefaultTableModel(
+                    new Object[][]{},
+                    new String[]{"ID", "Username", "Role", "Assign new role"}
+            ) {
+                @Override
+                public boolean isCellEditable(int row, int column) {
+                    return column == 3;
                 }
-                return null;
+            };
+            
+            DefaultTableModel tableModelAdmins = new DefaultTableModel(
+                    new Object[][]{},
+                    new String[]{"ID", "Username", "Role"}
+            );
+
+            JComboBox<String> comboBox = new JComboBox<>();
+            for (Role role : roles) {
+                comboBox.addItem(role.getName());
             }
 
-            @Override
-            protected void done() {
-                DefaultTableModel tableModelUsers = new DefaultTableModel(
-                        new Object[][]{},
-                        new String[]{"ID", "Username", "Role", "Assign new role"}
-                ) {
-                    @Override
-                    public boolean isCellEditable(int row, int column) {
-                        return column == 3;
-                    }
-                };
-                
-                DefaultTableModel tableModelAdmins = new DefaultTableModel(
-                        new Object[][]{},
-                        new String[]{"ID", "Username", "Role"}
-                );
-
-                JComboBox<String> comboBox = new JComboBox<>();
-                for (Role role : roles) {
-                    comboBox.addItem(role.getName());
+            for (User user : users) {
+                String roleName = (user.getRoleID() == 1) ? "User" : (user.getRoleID() == 2) ? "Admin" : "";
+                if (roleName.equals("User")) {
+                    tableModelUsers.addRow(new Object[]{user.getId(), user.getUsername(), roleName, comboBox.getItemAt(0)});
                 }
-
-                for (User user : users) {
-                    String roleName = (user.getRoleID() == 1) ? "User" : (user.getRoleID() == 2) ? "Admin" : "";
-                    if (roleName.equals("User")) {
-                        tableModelUsers.addRow(new Object[]{user.getId(), user.getUsername(), roleName, comboBox.getItemAt(0)});
-                    }
-                    if (roleName.equals("Admin")) {
-                        tableModelAdmins.addRow(new Object[]{user.getId(), user.getUsername(), roleName});
-                    }
+                if (roleName.equals("Admin")) {
+                    tableModelAdmins.addRow(new Object[]{user.getId(), user.getUsername(), roleName});
                 }
-
-                tbUsers.setModel(tableModelUsers);
-                tbAdmins.setModel(tableModelAdmins);
-                TableColumn roleColumn = tbUsers.getColumnModel().getColumn(3);
-                roleColumn.setCellEditor(new DefaultCellEditor(comboBox));
             }
-        }.execute();
+
+            tbUsers.setModel(tableModelUsers);
+            tbAdmins.setModel(tableModelAdmins);
+            
+            TableColumn roleColumn = tbUsers.getColumnModel().getColumn(3);
+            roleColumn.setCellEditor(new DefaultCellEditor(comboBox));
+        }
+    }.execute();
     }
     
     private Repository repository;

@@ -2,51 +2,47 @@
 <movieArchive>
     <movieXMLs>
         <movieXML>
-            <movie id="227">
-                <title>Bajkeri</title>
+            <movie id="441">
+                <title>A</title>
                 <pubDate/>
-                <description>Kathy (Jodie Comer), odlučna članica Vandala koja je udana za divljeg, bezobzirnog vozača bicikla po imenu Benny (Austin Butler), prisjeća se evolucije Vandala tijekom desetljeća, počevši od lokalnog kluba autsajdera ujedinjenih dobrim vremenima, tutnjavom motora i poštovanjem prema njihovom snažnom, postojanom vođi Johnnyju (Tom Hardy). Tijekom godina Kathy daje sve od sebe kako bi se snašla u neukroćenoj prirodi svog supruga i njegovoj odanosti Johnnyju s kojim osjeća da se mora natjecati za Bennyjevu pažnju. Kako život u Vandalima postaje sve opasniji, a klub prijeti da postane još zlokobnija banda, Kathy, Benny i Johnny prisiljeni su donositi odluke o svojoj odanosti klubu i jedni drugima. 20.15, 22.30</description>
-                <duration>121</duration>
-                <year>2024</year>
-                <posterURL>assets\4ffc5ff3-7530-4591-b62f-9f656ea42d36.jpg</posterURL>
-                <trailerURL>https://www.blitz-cinestar-bh.ba/cinestar-mostar/bajkeri/9242/20240621</trailerURL>
+                <description>dadasdadasa</description>
+                <duration>222</duration>
+                <year>1222</year>
+                <posterURL>assets\6270c85f-cdac-4d13-aa98-73165acdca2b.png</posterURL>
+                <trailerURL>sadadasda</trailerURL>
             </movie>
             <actors>
                 <actor>
-                    <id>585</id>
-                    <name>Austin B</name>
+                    <id>1177</id>
+                    <name>Alyla Browne</name>
                 </actor>
                 <actor>
-                    <id>586</id>
-                    <name>Jodie Comer</name>
-                </actor>
-                <actor>
-                    <id>587</id>
-                    <name>Tom Hardy</name>
-                </actor>
-                <actor>
-                    <id>588</id>
-                    <name>Michael Shannon</name>
-                </actor>
-                <actor>
-                    <id>589</id>
-                    <name>Mike Faist</name>
-                </actor>
-                <actor>
-                    <id>590</id>
-                    <name>Norman Reedus</name>
+                    <id>1187</id>
+                    <name>Alan Kim</name>
                 </actor>
             </actors>
             <directors>
                 <director>
-                    <id>183</id>
-                    <name>Jeff Ni</name>
+                    <id>391</id>
+                    <name>Ian Nelms</name>
+                </director>
+                <director>
+                    <id>396</id>
+                    <name>Adil &amp; Bilall</name>
+                </director>
+                <director>
+                    <id>398</id>
+                    <name>a a</name>
                 </director>
             </directors>
             <genres>
                 <genre>
-                    <id>200</id>
-                    <name>Krimi drama</name>
+                    <id>369</id>
+                    <name>Akcijski triler</name>
+                </genre>
+                <genre>
+                    <id>374</id>
+                    <name>a</name>
                 </genre>
             </genres>
         </movieXML>

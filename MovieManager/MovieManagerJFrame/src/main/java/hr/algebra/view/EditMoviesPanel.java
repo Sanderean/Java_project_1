@@ -20,7 +20,6 @@ import hr.algebra.model.MovieXML;
 import hr.algebra.utilities.FileUtils;
 import hr.algebra.utilities.IconUtils;
 import hr.algebra.utilities.JAXBUtils;
-import hr.algebra.utilities.MessageUtils;
 import hr.algebra.view.model.MovieTableModel;
 import java.awt.Frame;
 import java.awt.datatransfer.DataFlavor;
@@ -1295,6 +1294,8 @@ public class EditMoviesPanel<T> extends javax.swing.JPanel {
         new SwingWorker<List<Genre>, Void>() {
             @Override
             protected List<Genre> doInBackground() throws Exception {
+                genresModel.clear();
+                genres.clear();
                 int selectedRow = tbMovies.getSelectedRow();
                 Object firstColumnValue = tbMovies.getValueAt(selectedRow, 0);
                 return repository.getGenresForMovie((int) firstColumnValue);
@@ -1304,8 +1305,6 @@ public class EditMoviesPanel<T> extends javax.swing.JPanel {
             protected void done() {
                 try {
                     List<Genre> genres1 = get();
-                    genresModel.clear();
-                    genres.clear();
                     genres.addAll(genres1);
                     genres.forEach(genresModel::addElement);
                     lbGenres.setModel(genresModel);
@@ -1388,7 +1387,7 @@ public class EditMoviesPanel<T> extends javax.swing.JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Genre genre = lbGenres.getSelectedValue();
-                DefaultListModel<Genre> GenresModel = (DefaultListModel<Genre>) lbGenres.getModel();
+                DefaultListModel<Genre> genresModel = (DefaultListModel<Genre>) lbGenres.getModel();
 
                 if (lbGenres.getSelectedIndex() != -1 && SwingUtilities.isLeftMouseButton(e) && e.getClickCount() == 2) {
                     handleDoubleClickMovie(lbGenres, (parentFrame, selectedItem) -> {
@@ -1397,10 +1396,10 @@ public class EditMoviesPanel<T> extends javax.swing.JPanel {
                     cbMultipleEntities.setSelectedIndex(2);
                     if (tbMovies.getSelectedRow() == -1) {
 
-                        DefaultListModel<Object> allActorsModel = (DefaultListModel<Object>) lbAllItems.getModel();
-                        if (!allActorsModel.contains(genre)) {
-                            GenresModel.removeElement(genre);
-                            lbGenres.setModel(GenresModel);
+                        DefaultListModel<Object> allItemsModel = (DefaultListModel<Object>) lbAllItems.getModel();
+                        if (!allItemsModel.contains(genre)) {
+                            genresModel.removeElement(genre);
+                            lbGenres.setModel(genresModel);
                             genres.remove(genre);
                             cbMultipleEntities.setSelectedIndex(2);
                         }

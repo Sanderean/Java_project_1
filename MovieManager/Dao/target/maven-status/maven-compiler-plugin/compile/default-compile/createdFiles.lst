@@ -8,7 +8,6 @@ hr\algebra\dal\sql\DataSourceSingleton.class
 hr\algebra\model\Movie.class
 hr\algebra\dal\sql\SqlRepository.class
 hr\algebra\model\Actor.class
-hr\algebra\model\ComboBoxRoleEditor.class
 hr\algebra\model\MovieXML.class
 hr\algebra\model\Person.class
 hr\algebra\model\User.class
