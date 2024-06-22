@@ -12,6 +12,12 @@ public final class User implements Comparable<User> {
 
     private int id;
 
+    public User(int id, String username, int roleID) {
+        this.id = id;
+        this.username = username;
+        this.roleID = roleID;
+    }
+
     @Override
     public String toString() {
         return "Username: " + username ; 
@@ -63,6 +69,8 @@ public final class User implements Comparable<User> {
         this.username = Username;
         this.password = Password;
     }
+    
+    
 
     public User() {
     }

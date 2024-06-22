@@ -14,6 +14,8 @@ import hr.algebra.model.MovieGenre;
 import hr.algebra.model.User;
 import java.util.List;
 import java.util.Optional;
+import hr.algebra.model.Actor;
+import hr.algebra.model.Role;
 
 /**
  *
@@ -74,6 +76,9 @@ public interface Repository<T> {
     void deleteAllTables() throws Exception;
     
     int createUser(User user) throws Exception;
+    void updateUser(int id, User user) throws Exception;
     Optional<User> selectUser(String username, String password) throws Exception;
+    List<User> selectUsers() throws Exception;
+    List<Role> selectRoles() throws Exception;
     Optional<User> selectUserByUserName(String username) throws Exception;
 }

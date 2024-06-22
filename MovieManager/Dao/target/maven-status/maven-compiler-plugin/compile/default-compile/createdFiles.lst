@@ -8,11 +8,13 @@ hr\algebra\dal\sql\DataSourceSingleton.class
 hr\algebra\model\Movie.class
 hr\algebra\dal\sql\SqlRepository.class
 hr\algebra\model\Actor.class
+hr\algebra\model\ComboBoxRoleEditor.class
 hr\algebra\model\MovieXML.class
 hr\algebra\model\Person.class
 hr\algebra\model\User.class
 hr\algebra\model\ParsedData.class
 hr\algebra\model\GenericTransferable.class
+hr\algebra\model\Role.class
 hr\algebra\model\MovieArchive.class
 hr\algebra\model\MovieDirector.class
 hr\algebra\model\MovieGenre.class

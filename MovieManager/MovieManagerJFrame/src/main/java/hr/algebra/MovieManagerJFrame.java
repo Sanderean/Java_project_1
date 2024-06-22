@@ -6,6 +6,7 @@ package hr.algebra;
 
 import hr.algebra.view.EditMoviesPanel;
 import hr.algebra.view.UploadMoviesPanel;
+import hr.algebra.view.UsersPanel;
 
 /**
  *
@@ -99,6 +100,7 @@ public class MovieManagerJFrame extends javax.swing.JFrame {
         tpContent.add(EDIT_MOVIES, new EditMoviesPanel());
         if (roleID == 2) {
             tpContent.add(UPLOAD_MOVIES, new UploadMoviesPanel());
+            tpContent.add("Users", new UsersPanel());
         }
     }
     private static final String EDIT_MOVIES = "Edit movies";

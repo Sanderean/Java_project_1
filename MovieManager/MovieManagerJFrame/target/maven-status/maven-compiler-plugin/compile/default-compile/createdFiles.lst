@@ -29,7 +29,9 @@ hr\algebra\view\UploadMoviesPanel$1.class
 hr\algebra\view\RegisterPanel$2.class
 hr\algebra\view\EditMoviesPanel$ExportHandlerGenre.class
 hr\algebra\view\EditMoviesPanel$9.class
+hr\algebra\view\UsersPanel$3.class
 hr\algebra\view\EditMoviesPanel$24.class
+hr\algebra\view\UsersPanel.class
 hr\algebra\view\RegisterPanel.class
 hr\algebra\view\model\MovieTableModel.class
 hr\algebra\view\AddNewActor.class
@@ -43,7 +45,9 @@ hr\algebra\view\EditMoviesPanel$26.class
 hr\algebra\view\RegisterPanel$1.class
 hr\algebra\view\AddNewGenre$1.class
 hr\algebra\MovieManagerJFrame.class
+hr\algebra\view\UsersPanel$2.class
 hr\algebra\view\EditMoviesPanel$8.class
+hr\algebra\view\UsersPanel$3$1.class
 hr\algebra\view\UploadMoviesPanel.class
 hr\algebra\view\EditMoviesPanel$20.class
 hr\algebra\view\EditMoviesPanel$10.class
@@ -57,6 +61,8 @@ hr\algebra\view\LoginPanel.class
 hr\algebra\view\EditMoviesPanel$17.class
 hr\algebra\view\ActorInfo.class
 hr\algebra\view\EditMoviesPanel$7.class
+hr\algebra\view\UsersPanel$1.class
+hr\algebra\view\model\UserTableModel.class
 hr\algebra\view\EditMoviesPanel$ImportHandlerActor.class
 hr\algebra\view\LoginPanel$1.class
 hr\algebra\view\UploadMoviesPanel$6.class

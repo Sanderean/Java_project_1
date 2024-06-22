@@ -6,6 +6,7 @@ package hr.algebra.dal.sql;
 
 import hr.algebra.dal.Repository;
 import hr.algebra.model.Actor;
+import hr.algebra.model.Role;
 import hr.algebra.model.Director;
 import hr.algebra.model.Genre;
 import hr.algebra.model.Movie;
@@ -104,9 +105,16 @@ public class SqlRepository <T> implements Repository <T> {
     private static final String PASSWORD = "Password";
     private static final String ROLE_ID = "RoleID";
     
+    private static final String ROLE_NAME = "Name";
+    private static final String ID_ROLE = "IDRole";
+    
     private static final String CREATE_USER  = "{ CALL CreateUser (?, ?, ?) }";
+    private static final String UPDATE_USER  = "{ CALL UpdateUser (?, ?, ?, ?) }";
     private static final String SELECT_USER = "{ CALL SelectUser (?, ?) }";
+    private static final String SELECT_USERS = "{ CALL SelectUsers () }";
     private static final String SELECT_USER_BY_USERNAME = "{ CALL SelectUserByUsername (?) }";
+    
+    private static final String SELECT_ROLES = "{ CALL SelectRoles () }";
 
     @Override
     public int createActor(Actor actor) throws Exception {
@@ -1034,6 +1042,72 @@ public class SqlRepository <T> implements Repository <T> {
             }
         }
         return Optional.empty();
+    }
+
+    @Override
+    public List<User> selectUsers() throws Exception {
+         List<User> users = new ArrayList<>();
+        
+        DataSource dataSource = DataSourceSingleton.getInstance();
+        
+        try(Connection con = dataSource.getConnection();
+            CallableStatement stmt = con.prepareCall(SELECT_USERS)) {
+            
+            try(ResultSet rs = stmt.executeQuery())
+            {
+                while(rs.next())
+                {
+                    users.add(
+                    new User(
+                            rs.getInt(ID_USER), 
+                            rs.getString(USERNAME), 
+                            rs.getString(PASSWORD),
+                            rs.getInt(ROLE_ID))
+                    );
+                }
+            }
+        }
+        
+        return users;
+    }
+
+    @Override
+    public List<Role> selectRoles() throws Exception {
+        List<Role> roles = new ArrayList<>();
+        
+        DataSource dataSource = DataSourceSingleton.getInstance();
+        
+        try (Connection con = dataSource.getConnection(); CallableStatement stmt = con.prepareCall(SELECT_ROLES)) {
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    roles.add(
+                            new Role(
+                                    rs.getInt(ID_ROLE),
+                                    rs.getString(ROLE_NAME))
+                    );
+                }
+            }
+        }
+        
+        return roles;
+    }
+
+    @Override
+    public void updateUser(int id, User user) throws Exception {
+         DataSource dataSource = DataSourceSingleton.getInstance();
+        
+        try(Connection con = dataSource.getConnection();
+            CallableStatement stmt = con.prepareCall(UPDATE_USER)) {
+            
+            stmt.setString(USERNAME, user.getUsername());
+            stmt.setString(PASSWORD, user.getPassword());
+            stmt.setInt(ROLE_ID, user.getRoleID());
+            
+            stmt.setInt(ID_USER, id);
+            
+            stmt.executeUpdate(); 
+        }
     }
 
     
